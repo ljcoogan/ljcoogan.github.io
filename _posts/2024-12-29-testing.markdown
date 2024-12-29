@@ -1,0 +1,61 @@
+---
+layout: post
+title:  "Testing testing 123"
+date:   2024-12-29 18:39:00 +0000
+categories: Testing
+---
+
+# Heading 1
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a elit rhoncus, sagittis lorem pellentesque, fermentum quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam convallis ut neque in aliquam. Aliquam nec tristique eros. Proin eget tellus nibh. Morbi vitae aliquet lectus, a vestibulum odio. Mauris aliquet justo id eros facilisis, in iaculis eros tristique. Suspendisse vitae tincidunt ipsum. Curabitur eget tincidunt lorem.
+
+## Heading 2
+Praesent lacinia arcu urna, et fringilla nibh vehicula a. Integer dictum quis purus id fermentum. Etiam ac fringilla mi. Etiam eget tincidunt augue, quis pretium augue. Duis quis magna at elit porttitor venenatis vitae et dui. Mauris in luctus magna. Praesent euismod rutrum vulputate. Nullam tincidunt semper molestie. Curabitur sed convallis erat. Praesent placerat nisl vel elit elementum imperdiet. Aenean ac dapibus justo, non imperdiet quam. Nunc lacus mauris, mollis nec neque sit amet, rutrum euismod velit. Suspendisse condimentum diam commodo urna fringilla, in finibus tellus molestie. Quisque ac mauris tempor, condimentum orci vel, sagittis neque. Praesent scelerisque eros nec erat pellentesque tincidunt.
+
+### Heading 3
+1. Note 1
+2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a elit rhoncus, sagittis lorem pellentesque, fermentum quam.
+3. Note 3
+
+## Heading 2
+Aliquam semper sodales magna non ultricies. Etiam tempus purus sit amet dictum sollicitudin. Sed malesuada porta nulla, eu iaculis dolor ullamcorper vitae. Pellentesque et elementum ligula, a maximus ligula. Nam diam metus, interdum at auctor ac, tristique vel tortor. Fusce auctor luctus lorem eu ornare. Mauris odio nisl, interdum non porta at, ullamcorper et arcu. Fusce vitae porta purus, eget auctor diam. Maecenas pretium tortor sed ligula congue, sit amet accumsan sapien finibus. Etiam faucibus magna non quam imperdiet venenatis. Etiam sagittis a ante non molestie. Pellentesque tellus turpis, efficitur ac nibh ac, dictum gravida diam. Integer iaculis erat magna, ut sollicitudin lorem ullamcorper eu.
+
+### Heading 3
+Text before
+- Bulletpoint 1
+- Bulletpoint 2
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a elit rhoncus, sagittis lorem pellentesque, fermentum quam.
+
+Text in between
+
+- Mixing bulletpoints
+  1. And numbers
+  2. And more numbers
+- And more bulletpoints
+
+Text after
+
+```typescript
+import { Events } from "discord.js";
+import client from "./game/client.js";
+import { commandHandler, deployCommands, readCommands } from "./system/commands.js";
+
+(async () => {
+  const hasEnvironmentVariables = Boolean(process.env.BOT_TOKEN && process.env.BOT_CLIENT_ID && process.env.GUILD_ID);
+  if (!hasEnvironmentVariables) {
+    console.error("index.ts: Bot environment variables not provided.");
+    return;
+  }
+
+  client.login(process.env.BOT_TOKEN);
+
+  client.commands = await readCommands();
+
+  await deployCommands(client);
+
+  client.on(Events.InteractionCreate, commandHandler);
+
+  client.once(Events.ClientReady, (readyClient) => {
+    console.log(`Ready! Logged in as ${readyClient.user.tag}.`);
+  });
+})();
+```
