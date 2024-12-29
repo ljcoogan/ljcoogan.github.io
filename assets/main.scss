@@ -12,13 +12,21 @@ body {
   font-family: "Inter", "Helvetica", "Arial", sans-serif;
 }
 
-a.site-title, a.site-title:hover {
+a.site-title {
   font-weight: 800;
   color: #dd1144;
 }
 
-a, a:hover {
+a.site-title:hover {
+  color: #c4103d;
+}
+
+a {
   color: #1756a9;
+}
+
+a:hover {
+  color: #0d2f5c;
 }
 
 h2.post-list-heading {
