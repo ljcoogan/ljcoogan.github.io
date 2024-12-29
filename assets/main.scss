@@ -10,6 +10,10 @@ body {
   font-family: "Inter", "Helvetica", "Arial", sans-serif;
 }
 
+a, a:hover {
+  color: #1756a9;
+}
+
 a.site-title {
   font-weight: 800;
   color: #dd1144;
@@ -17,6 +21,10 @@ a.site-title {
 
 h2.post-list-heading {
   font-weight: 800;
+}
+
+span.post-meta {
+  color: black;
 }
 
 a.post-link {
