@@ -20,7 +20,10 @@ h1.post-title {
 
   .highlight {
     background-color: #f9f9fa;
-    * { background-color: inherit; }
+    * {
+      background-color: inherit;
+      font-family: "JetBrains Mono"
+    }
     pre { line-height: 125%; }
   }
 }
