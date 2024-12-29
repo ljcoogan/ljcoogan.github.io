@@ -11,19 +11,20 @@ body {
   font-family: "Inter", "Helvetica", "Arial", sans-serif;
 }
 
-a, a:hover {
-  color: #1756a9;
-}
-
 a.site-title {
   font-weight: 800;
   color: #dd1144;
+}
+
+a, a:hover {
+  color: #1756a9;
 }
 
 h2.post-list-heading {
   font-weight: 800;
 }
 
+/* The date and category line for each post on the homepage */
 span.post-meta {
   color: black;
 }

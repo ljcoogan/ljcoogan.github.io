@@ -30,6 +30,7 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Tell SASS it can import files from assets/css
 sass:
   load_paths:
     - assets/css
