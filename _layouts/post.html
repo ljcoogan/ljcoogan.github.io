@@ -19,14 +19,20 @@ layout: default
     {{ content }}
   </div>
 
-  <script src="https://utteranc.es/client.js"
-          repo="ljcoogan/ljcoogan.github.io"
-          issue-term="title"
-          label="comments"
-          theme="github-light"
-          crossorigin="anonymous"
-          async>
-  </script>
+  <hr>
+  <div class="comments">
+    <br>
+    <p>You'll need a <a href="https://github.com/">GitHub</a> account to comment. Comments are moderated - be nice to each other!</p>
+    <script src="https://utteranc.es/client.js"
+            repo="ljcoogan/ljcoogan.github.io"
+            issue-term="title"
+            label="comments"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
+
 
   <!--  {%- if site.disqus.shortname -%}-->
   <!--    {%- include disqus_comments.html -%}-->
