@@ -18,6 +18,25 @@ h1.post-title {
     font-size: 38px;
   }
 
+  blockquote {
+    font-size: 18px;
+    p {
+      color: black;
+      font-weight: 200;
+      letter-spacing: -0.2px;
+    }
+
+    code {
+      font-style: normal;
+      font-weight: 300;
+    }
+  }
+
+  code {
+    background-color: #f9f9fa;
+    font-family: "JetBrains Mono";
+  }
+
   /* syntax highlighting */
   .highlight {
     background-color: #f9f9fa;
